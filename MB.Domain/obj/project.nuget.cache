@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "sxyn/TDQ11o4St7iUCa9a2DvLBS5YjgAYfYe4ZDXz5vR2D9TlVHytXPKFZZMg0XRO88kozddszmOo6wJiPsJwg==",
+  "success": true,
+  "projectFilePath": "E:\\asp net core atrya\\Example\\MasterBlogger\\MasterBlogger\\MB.Domain\\MB.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MJD\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
