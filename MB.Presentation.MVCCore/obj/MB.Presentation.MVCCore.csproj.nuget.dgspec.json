@@ -99,6 +99,9 @@
               },
               "E:\\asp net core atrya\\Example\\MasterBlogger\\MasterBlogger\\MB.Domain\\MB.Domain.csproj": {
                 "projectPath": "E:\\asp net core atrya\\Example\\MasterBlogger\\MasterBlogger\\MB.Domain\\MB.Domain.csproj"
+              },
+              "E:\\asp net core atrya\\Example\\MasterBlogger\\MasterBlogger\\MB.Infrastructure.EfCore\\MB.Infrastructure.EfCore.csproj": {
+                "projectPath": "E:\\asp net core atrya\\Example\\MasterBlogger\\MasterBlogger\\MB.Infrastructure.EfCore\\MB.Infrastructure.EfCore.csproj"
               }
             }
           }
@@ -163,7 +166,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\asp net core atrya\\Example\\MasterBlogger\\MasterBlogger\\MB.Application.Contracts\\MB.Application.Contracts.csproj": {
+                "projectPath": "E:\\asp net core atrya\\Example\\MasterBlogger\\MasterBlogger\\MB.Application.Contracts\\MB.Application.Contracts.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

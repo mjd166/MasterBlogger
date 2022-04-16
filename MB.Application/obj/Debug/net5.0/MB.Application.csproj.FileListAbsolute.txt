@@ -15,3 +15,5 @@ E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Application\obj\Deb
 E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Application\obj\Debug\net5.0\MB.Application.dll
 E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Application\obj\Debug\net5.0\ref\MB.Application.dll
 E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Application\obj\Debug\net5.0\MB.Application.pdb
+E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Application\bin\Debug\net5.0\MB.Infrastructure.EfCore.dll
+E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Application\bin\Debug\net5.0\MB.Infrastructure.EfCore.pdb

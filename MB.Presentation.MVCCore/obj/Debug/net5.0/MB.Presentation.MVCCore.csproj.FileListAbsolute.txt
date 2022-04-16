@@ -90,3 +90,4 @@ E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Presentation.MVCCor
 E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Presentation.MVCCore\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
 E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Presentation.MVCCore\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\ArticleCategoryManagement\Create.cshtml.g.cs
 E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Presentation.MVCCore\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\ArticleCategoryManagement\Edit.cshtml.g.cs
+E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Presentation.MVCCore\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\ArticleManagement\List.cshtml.g.cs

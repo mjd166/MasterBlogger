@@ -10,3 +10,6 @@ E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Domain\obj\Debug\ne
 E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Domain\obj\Debug\net5.0\MB.Domain.dll
 E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Domain\obj\Debug\net5.0\ref\MB.Domain.dll
 E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Domain\obj\Debug\net5.0\MB.Domain.pdb
+E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Domain\bin\Debug\net5.0\MB.Application.Contracts.dll
+E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Domain\bin\Debug\net5.0\MB.Application.Contracts.pdb
+E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Domain\obj\Debug\net5.0\MB.Domain.csproj.CopyComplete

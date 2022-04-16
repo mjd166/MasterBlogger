@@ -1,5 +1,8 @@
-﻿using MB.Domain.Services;
+﻿using MB.Domain.ArticleAgg;
+using MB.Domain.Services;
 using System;
+using System.Collections.Generic;
+
 namespace MB.Domain.ArticleCategoryAgg
 {
     public class ArticleCategory
@@ -9,6 +12,12 @@ namespace MB.Domain.ArticleCategoryAgg
         public bool IsDeleted { get; private set; }
         public DateTime CreationDate { get; private set; }
 
+        public ICollection<Article> Articles { get;private set; }
+
+        protected ArticleCategory()
+        {
+
+        }
 
 
         public void GuarAgainstEmptyTitle(string title)
@@ -22,6 +31,7 @@ namespace MB.Domain.ArticleCategoryAgg
             Title = title;
             IsDeleted = false;
             CreationDate = DateTime.Now;
+            Articles = new List<Article>();
         }
 
         public void Rename(string title)

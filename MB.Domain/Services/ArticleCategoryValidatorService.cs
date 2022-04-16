@@ -1,6 +1,5 @@
 ﻿using MB.Domain.ArticleCategoryAgg;
 using MB.Domain.Exceptions;
-using System;
 
 namespace MB.Domain.Services
 {
