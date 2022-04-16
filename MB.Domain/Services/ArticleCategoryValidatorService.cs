@@ -1,4 +1,5 @@
 ﻿using MB.Domain.ArticleCategoryAgg;
+using MB.Domain.Exceptions;
 using System;
 
 namespace MB.Domain.Services
@@ -15,7 +16,7 @@ namespace MB.Domain.Services
         public void CheckThatThisRecordAlreadyExists(string title)
         {
             if (_articlecategoryrepository.Exists(title))
-                throw new Exception();
+                throw new DoublicatedRecordException("This record already exists in database.");
         }
     }
 }
