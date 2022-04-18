@@ -21,7 +21,12 @@ namespace MB.Infrastructure.EfCore.Repositories
         public void CreateAndSave(Article entity)
         {
             _context.Articles.Add(entity);
-            _context.SaveChanges();
+            Save();
+        }
+
+        public Article Get(long id)
+        {
+            return _context.Articles.FirstOrDefault(x => x.Id == id);
         }
 
         public List<ArticleViewModel> GetList()
@@ -35,6 +40,12 @@ namespace MB.Infrastructure.EfCore.Repositories
                 ArticleCategory = x.ArticleCategory.Title
 
             }).ToList();
+        }
+
+        public void Save()
+        {
+            _context.SaveChanges
+                 ();
         }
     }
 }
