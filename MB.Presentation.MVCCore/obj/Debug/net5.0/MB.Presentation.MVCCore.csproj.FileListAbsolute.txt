@@ -91,3 +91,4 @@ E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Presentation.MVCCor
 E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Presentation.MVCCore\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\ArticleCategoryManagement\Create.cshtml.g.cs
 E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Presentation.MVCCore\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\ArticleCategoryManagement\Edit.cshtml.g.cs
 E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Presentation.MVCCore\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\ArticleManagement\List.cshtml.g.cs
+E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Presentation.MVCCore\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\ArticleManagement\Create.cshtml.g.cs
