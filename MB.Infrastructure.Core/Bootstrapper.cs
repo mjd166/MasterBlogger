@@ -2,6 +2,7 @@
 using MB.Application.Contracts.Article;
 using MB.Application.Contracts.ArticleCategory;
 using MB.Domain.ArticleAgg;
+using MB.Domain.ArticleAgg.Services;
 using MB.Domain.ArticleCategoryAgg;
 using MB.Domain.Services;
 using MB.Infrastructure.EfCore;
@@ -24,6 +25,8 @@ namespace MB.Infrastructure.Core
 
             services.AddTransient<IArticleApplication, ArticleApplication>();
             services.AddTransient<IArticleRepository, ArticleRepository>();
+            services.AddTransient<IArticleValidatorService, ArticleValidatorService>();
+
 
             services.AddDbContext<MasterBloggerContext>(options => options.UseSqlServer(ConnectionString));
 
