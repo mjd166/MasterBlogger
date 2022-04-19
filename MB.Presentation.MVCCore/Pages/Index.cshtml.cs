@@ -1,23 +1,25 @@
 ﻿using System.Collections.Generic;
-
+using MB.Infrastructure.Query;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace MB.Presentation.MVCCore.Pages
 {
     public class IndexModel : PageModel
     {
-       // public List<ArticleQueryView> Articles { get; set; }
+        public List<ArticleQueryView> articles { get; set; }
 
-      //  private readonly IArticleQuery _articleQuery;
+        private readonly IArticleQuery articleQuery;
 
-        public IndexModel()
+        public IndexModel(IArticleQuery articleQuery)
         {
-           // _articleQuery = articleQuery;
+            this.articleQuery = articleQuery;
         }
+
+        
 
         public void OnGet()
         {
-            //Articles = _articleQuery.GetArticles();
+            articles = articleQuery.GetArticles();
         }
     }
 }
