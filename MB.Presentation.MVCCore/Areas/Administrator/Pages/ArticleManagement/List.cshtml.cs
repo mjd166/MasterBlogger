@@ -20,14 +20,16 @@ namespace MB.Presentation.MVCCore.Areas.Administrator.Pages.ArticleManagement
             ArticleViewModels = articleApplication.GetList();
         }
 
-        public void OnPostRemove(long id)
+        public Microsoft.AspNetCore.Mvc.RedirectToPageResult OnPostRemove(long id)
         {
-
+            articleApplication.Remove(id);
+            return RedirectToPage("./List");
         }
 
-        public void OnPostActivate(long id)
+        public Microsoft.AspNetCore.Mvc.RedirectToPageResult OnPostActivate(long id)
         {
-
+            articleApplication.Restore(id);
+            return RedirectToPage("./List");
         }
     }
 }

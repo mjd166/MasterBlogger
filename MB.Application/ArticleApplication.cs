@@ -9,11 +9,11 @@ namespace MB.Application
     public class ArticleApplication : IArticleApplication
     {
         private readonly IArticleRepository _articleRepository;
-     
+
         public ArticleApplication(IArticleRepository articleRepository)
         {
             _articleRepository = articleRepository;
-            
+
         }
 
         public void Create(CreateArticle command)
@@ -31,7 +31,7 @@ namespace MB.Application
 
         public EditArticle Get(long id)
         {
-          var article = _articleRepository.Get(id);
+            var article = _articleRepository.Get(id);
 
             return new EditArticle
             {
@@ -48,6 +48,20 @@ namespace MB.Application
         {
             return _articleRepository.GetList();
 
+        }
+
+        public void Remove(long id)
+        {
+            var article = _articleRepository.Get(id);
+            article.Remove();
+            _articleRepository.Save();
+        }
+
+        public void Restore(long id)
+        {
+            var article = _articleRepository.Get(id);
+            article.Restore();
+            _articleRepository.Save();
         }
     }
 }

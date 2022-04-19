@@ -48,6 +48,14 @@ namespace MB.Domain.ArticleAgg
             ArticleCategoryId = articleCategoryId;
         }
 
+        public void Remove()
+        {
+            IsDeleted = true;
+        }
 
+        public void Restore()
+        {
+            IsDeleted = false;
+        }
     }
 }
