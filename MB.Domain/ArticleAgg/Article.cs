@@ -1,5 +1,7 @@
 ﻿using MB.Domain.ArticleCategoryAgg;
+using MB.Domain.CommentAgg;
 using System;
+using System.Collections.Generic;
 
 namespace MB.Domain.ArticleAgg
 {
@@ -22,6 +24,8 @@ namespace MB.Domain.ArticleAgg
 
         public ArticleCategory ArticleCategory { get;private set; }
 
+        public ICollection<Comment> Comments { get; private set; }
+
 
         protected Article()
         {
@@ -32,6 +36,7 @@ namespace MB.Domain.ArticleAgg
         {
             Validate(title, articleCategoryId);
 
+            Comments = new List<Comment>();
             Title = title;
             ShortDescription = shortDescription;
             Image = image;
