@@ -1,9 +1,11 @@
 ﻿using MB.Application;
 using MB.Application.Contracts.Article;
 using MB.Application.Contracts.ArticleCategory;
+using MB.Application.Contracts.Comment;
 using MB.Domain.ArticleAgg;
 using MB.Domain.ArticleAgg.Services;
 using MB.Domain.ArticleCategoryAgg;
+using MB.Domain.CommentAgg;
 using MB.Domain.Services;
 using MB.Infrastructure.EfCore;
 using MB.Infrastructure.EfCore.Repositories;
@@ -33,6 +35,9 @@ namespace MB.Infrastructure.Core
 
             services.AddTransient<IArticleQuery, ArticleQuery>();
 
+
+            services.AddTransient<ICommentApplication, CommentApplication>();
+            services.AddTransient<ICommentRepository, CommentRepository>();
 
             services.AddDbContext<MasterBloggerContext>(options => options.UseSqlServer(ConnectionString));
 
