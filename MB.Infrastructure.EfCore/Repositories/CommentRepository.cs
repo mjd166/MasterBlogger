@@ -19,7 +19,12 @@ namespace MB.Infrastructure.EfCore.Repositories
         public void CreateAndSave(Comment comment)
         {
             _context.Comments.Add(comment);
-            _context.SaveChanges();
+            Save();
+        }
+
+        public Comment Get(long id)
+        {
+            return _context.Comments.FirstOrDefault(x => x.Id == id);
         }
 
         public List<CommentViewModel> GetList()
@@ -35,6 +40,11 @@ namespace MB.Infrastructure.EfCore.Repositories
                 Article = x.Article.Title
 
             }).ToList();
+        }
+
+        public void Save()
+        {
+            _context.SaveChanges();
         }
     }
 }

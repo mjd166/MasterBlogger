@@ -32,5 +32,15 @@ namespace MB.Domain.CommentAgg
             CreationDate = DateTime.Now;
             Status = Statuses.New;
         }
+
+        public void Confirm()
+        {
+            this.Status = Statuses.Confirm;
+        }
+
+        public void Cancel()
+        {
+            this.Status = Statuses.Canceled;
+        }
     }
 }
