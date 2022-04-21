@@ -8,7 +8,7 @@
     <div class="container">
         <div class="post-single">
             <div class="post-thumbnail">
-               <img src="@Model.Article.Image" alt="@Model.Article.Title" title="@Model.Article.Title" class="img-fluid">
+                <img src="@Model.Article.Image" alt="@Model.Article.Title" title="@Model.Article.Title" class="img-fluid">
             </div>
             <div class="post-details">
                 <div class="post-meta d-flex justify-content-between">
@@ -38,30 +38,30 @@
                 </div>
 
 
-                <!--<div class="post-comments">
-        <header>-->
-                @*  <h3 class="h6">Post Comments<span class="no-of-comments">(@Model.Article.CommentsCount)</span></h3>*@
-                <!--</header>-->
-                @*@foreach (var comment in Model.Article.Comments)
-        {
-            <div class="comment">
-                <div class="comment-header d-flex justify-content-between">
-                    <div class="user d-flex align-items-center">
-                        <div class="image">
-                            <img src="~/img/user.svg" alt="..." class="img-fluid rounded-circle">
+                <div class="post-comments">
+                    <header>
+                        <h3 class="h6">Post Comments<span class="no-of-comments">(@Model.Article.CommentCount)</span></h3>
+                    </header>
+                    @foreach (var comment in Model.Article.Comments)
+                    {
+                        <div class="comment">
+                            <div class="comment-header d-flex justify-content-between">
+                                <div class="user d-flex align-items-center">
+                                    <div class="image">
+                                        <img src="~/img/user.svg" alt="..." class="img-fluid rounded-circle">
+                                    </div>
+                                    <div class="title">
+                                        <strong>@comment.Name</strong><span class="date">@comment.CreationDate</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-body">
+                                <p>@comment.Message</p>
+                            </div>
                         </div>
-                        <div class="title">
-                            <strong>@comment.Name</strong><span class="date">@comment.CreationDate</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="comment-body">
-                    <p>@comment.Message</p>
-                </div>
-            </div>
-        }*@
+                    }
 
-                @* </div> *@
+                </div>
 
                 <div class="add-comment">
                     <header>

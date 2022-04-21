@@ -3,6 +3,7 @@ using MB.Application.Contracts.Comment;
 using MB.Infrastructure.Query;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Collections.Generic;
 
 namespace MB.Presentation.MVCCore.Pages
 {
@@ -11,6 +12,8 @@ namespace MB.Presentation.MVCCore.Pages
 
         [BindProperty]
         public ArticleQueryView  Article { get; set; }
+
+      
 
         private readonly IArticleQuery _articleQuery;
         private readonly ICommentApplication _commentApplication;
