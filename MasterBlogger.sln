@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MB.Presentation.MVCCore", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MB.Infrastructure.Core", "MB.Infrastructure.Core\MB.Infrastructure.Core.csproj", "{F27A6BD5-AFEB-408F-BAE1-2AB0DD24C7E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MB.Infrastructure.Query", "MB.Infrastructure.Query\MB.Infrastructure.Query.csproj", "{DFD775E2-5DA7-4B82-A7CA-C32D70A7230E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MB.Infrastructure.Query", "MB.Infrastructure.Query\MB.Infrastructure.Query.csproj", "{DFD775E2-5DA7-4B82-A7CA-C32D70A7230E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,91 @@
+﻿@page
+@model MB.Presentation.MVCCore.Areas.Administrator.Pages.CommentManagement.ListModel
+@{
+}
+@using MB.Domain.CommentAgg
+<div class="card">
+    <div class="card-header">
+        <h3 class="float-left">Comment List</h3>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Article</th>
+                    <th>Message</th>
+                    <th>Status</th>
+                    <th>CreationDate</th>
+                    <th>Operation</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var comment in Model.Comments)
+                {
+                    <tr>
+                        <td>@comment.Id</td>
+                        <td>@comment.Name</td>
+                        <td>@comment.Email</td>
+                        <td>@comment.Article</td>
+                        <td>@comment.Message</td>
+                        <td>
+                            @if (comment.Status == Statuses.New)
+                            {
+                                <i class="fa fa-2x fa-eye text-info "></i>
+                            }
+                            @if (comment.Status == Statuses.Canceled)
+                            {
+                                <i class="fa fa-2x fa-close text-danger "></i>
+                            }
+                            @if (comment.Status == Statuses.Confirm)
+                            {
+                                <i class="fa fa-2x fa-close text-success "></i>
+                            }
+
+                        </td>
+
+                        <td>@comment.CreationDate.ToString()</td>
+                        <td>
+
+                            @if (comment.Status == Statuses.New)
+                            {
+                                <form asp-page-handler="Confirm" method="post" class="float-left">
+                                    <button class="btn btn-success">Confirm</button>
+                                    <input type="hidden" name="id" value="@comment.Id" />
+                                </form>
+                                <form asp-page-handler="Cancel" method="post" class="float-left">
+                                    <button class="btn btn-success">Cancel</button>
+                                    <input type="hidden" name="id" value="@comment.Id" />
+                                </form>
+                            }
+                            else
+                            {
+                                if (comment.Status == Statuses.Confirm)
+                                {
+                                    <form asp-page-handler="Cancel" method="post" class="float-left">
+                                        <button class="btn btn-success">Cancel</button>
+                                        <input type="hidden" name="id" value="@comment.Id" />
+                                    </form>
+                                }
+                                else
+                                {
+                                    <form asp-page-handler="Confirm" method="post" class="float-left">
+                                        <button class="btn btn-success">Confirm</button>
+                                        <input type="hidden" name="id" value="@comment.Id" />
+                                    </form>
+                                }
+
+                            }
+
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
