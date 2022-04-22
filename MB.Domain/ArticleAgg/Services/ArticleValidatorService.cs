@@ -13,7 +13,7 @@ namespace MB.Domain.ArticleAgg.Services
 
         public void CheckThatThisRecordAlreadyExist(string title)
         {
-            if (articleRepository.Exists(title))
+            if (articleRepository.Exists(x=>x.Title ==title))
                 throw new DoublicatedRecordException();
 
         }

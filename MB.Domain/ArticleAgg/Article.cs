@@ -1,13 +1,14 @@
-﻿using MB.Domain.ArticleCategoryAgg;
+﻿using _01_Framework.Domain;
+using MB.Domain.ArticleCategoryAgg;
 using MB.Domain.CommentAgg;
 using System;
 using System.Collections.Generic;
 
 namespace MB.Domain.ArticleAgg
 {
-    public class Article
+    public class Article :DomainBase<long>
     {
-        public long Id { get;private set; }
+       
 
         public string Title { get; private set; }
 
@@ -18,7 +19,7 @@ namespace MB.Domain.ArticleAgg
 
         public bool IsDeleted { get;private set; }
 
-        public DateTime CreationDate { get;private set; }
+     
 
         public long ArticleCategoryId { get;private set; }
 
@@ -43,7 +44,7 @@ namespace MB.Domain.ArticleAgg
             Content = content;
             ArticleCategoryId = articleCategoryId;
             IsDeleted = false;
-            CreationDate = DateTime.Now;
+         
         }
 
         private static void Validate(string title, long articleCategoryId)

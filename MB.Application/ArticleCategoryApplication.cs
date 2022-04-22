@@ -3,6 +3,7 @@ using MB.Domain.ArticleCategoryAgg;
 using MB.Domain.Services;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 
 namespace MB.Application
 {
@@ -20,7 +21,7 @@ namespace MB.Application
         {
             var articlecategory = _articleCategoryRepository.Get(id);
             articlecategory.Activate();
-            _articleCategoryRepository.Save();
+            //_articleCategoryRepository.Save();
         }
 
         public void Add(CreateArticleCategory command)
@@ -42,36 +43,27 @@ namespace MB.Application
         public List<ArticleCategoryViewModel> List()
         {
             var articlecategories = _articleCategoryRepository.GetAll();
-
-            var result = new List<ArticleCategoryViewModel>();
-
-            foreach(ArticleCategory article in articlecategories)
+            return (articlecategories.Select(article => new ArticleCategoryViewModel
             {
-                result.Add(new ArticleCategoryViewModel
-                {
-                    Id = article.Id,
-                    IsDeleted=article.IsDeleted,
-                    Name =article.Title,
-                    CreationDate = article.CreationDate.ToString(CultureInfo.InvariantCulture )
-                });
-
-                
-            }
-            return result;
+                Id = article.Id,
+                IsDeleted = article.IsDeleted,
+                Name = article.Title,
+                CreationDate = article.CreationDate.ToString(CultureInfo.InvariantCulture)
+            })).OrderBy(x => x.Id).ToList();
         }
 
         public void Remove(long id)
         {
             var articlecategory = _articleCategoryRepository.Get(id);
             articlecategory.Remove();
-            _articleCategoryRepository.Save();
+            //_articleCategoryRepository.Save();
         }
 
         public void Rename(RenameArticleCategory command)
         {
             var articlecategory = _articleCategoryRepository.Get(command.Id);
             articlecategory.Rename(command.Title);
-            _articleCategoryRepository.Save();
+           // _articleCategoryRepository.Save();
         }
 
       

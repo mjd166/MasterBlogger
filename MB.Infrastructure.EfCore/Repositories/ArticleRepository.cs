@@ -1,4 +1,5 @@
-﻿using MB.Application.Contracts.Article;
+﻿using _01_Framework.Infrastructure;
+using MB.Application.Contracts.Article;
 using MB.Domain.ArticleAgg;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -8,31 +9,12 @@ namespace MB.Infrastructure.EfCore.Repositories
 {
 
 
-    public  class ArticleRepository :IArticleRepository
+    public  class ArticleRepository :BaseRepository<long,Article>,   IArticleRepository
     {
 
         private readonly MasterBloggerContext _context;
 
-        public ArticleRepository(MasterBloggerContext context)
-        {
-            _context = context;
-        }
-
-        public void CreateAndSave(Article entity)
-        {
-            _context.Articles.Add(entity);
-            Save();
-        }
-
-        public bool Exists(string name)
-        {
-            return _context.Articles.Any(x => x.Title == name);
-        }
-
-        public Article Get(long id)
-        {
-            return _context.Articles.FirstOrDefault(x => x.Id == id);
-        }
+        public ArticleRepository(MasterBloggerContext context) : base(context) => _context = context;
 
         public List<ArticleViewModel> GetList()
         {
@@ -47,10 +29,6 @@ namespace MB.Infrastructure.EfCore.Repositories
             }).ToList();
         }
 
-        public void Save()
-        {
-            _context.SaveChanges
-                 ();
-        }
+      
     }
 }

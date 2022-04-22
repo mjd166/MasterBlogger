@@ -14,7 +14,7 @@ namespace MB.Domain.Services
 
         public void CheckThatThisRecordAlreadyExists(string title)
         {
-            if (_articlecategoryrepository.Exists(title))
+            if (_articlecategoryrepository.Exists(x=>x.Title ==title))
                 throw new DoublicatedRecordException("This record already exists in database.");
         }
     }

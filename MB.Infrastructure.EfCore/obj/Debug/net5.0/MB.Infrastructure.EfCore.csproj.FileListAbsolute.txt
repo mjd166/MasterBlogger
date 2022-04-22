@@ -18,3 +18,5 @@ E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Infrastructure.EfCo
 E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Infrastructure.EfCore\obj\Debug\net5.0\MB.Infrastructure.EfCore.genruntimeconfig.cache
 E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Infrastructure.EfCore\bin\Debug\net5.0\MB.Application.Contracts.dll
 E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Infrastructure.EfCore\bin\Debug\net5.0\MB.Application.Contracts.pdb
+E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Infrastructure.EfCore\bin\Debug\net5.0\01_Framework.dll
+E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Infrastructure.EfCore\bin\Debug\net5.0\01_Framework.pdb

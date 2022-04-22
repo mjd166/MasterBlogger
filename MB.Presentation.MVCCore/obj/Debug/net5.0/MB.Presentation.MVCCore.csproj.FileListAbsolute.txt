@@ -96,3 +96,5 @@ E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Presentation.MVCCor
 E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Presentation.MVCCore\bin\Debug\net5.0\MB.Infrastructure.Query.dll
 E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Presentation.MVCCore\bin\Debug\net5.0\MB.Infrastructure.Query.pdb
 E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Presentation.MVCCore\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\CommentManagement\List.cshtml.g.cs
+E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Presentation.MVCCore\bin\Debug\net5.0\01_Framework.dll
+E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Presentation.MVCCore\bin\Debug\net5.0\01_Framework.pdb

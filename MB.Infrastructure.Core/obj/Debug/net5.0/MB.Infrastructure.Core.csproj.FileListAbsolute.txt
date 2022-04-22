@@ -21,3 +21,5 @@ E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Infrastructure.Core
 E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Infrastructure.Core\obj\Debug\net5.0\MB.Infrastructure.Core.pdb
 E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Infrastructure.Core\bin\Debug\net5.0\MB.Infrastructure.Query.dll
 E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Infrastructure.Core\bin\Debug\net5.0\MB.Infrastructure.Query.pdb
+E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Infrastructure.Core\bin\Debug\net5.0\01_Framework.dll
+E:\asp net core atrya\Example\MasterBlogger\MasterBlogger\MB.Infrastructure.Core\bin\Debug\net5.0\01_Framework.pdb
