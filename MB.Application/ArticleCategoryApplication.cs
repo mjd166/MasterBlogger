@@ -1,4 +1,5 @@
-﻿using MB.Application.Contracts.ArticleCategory;
+﻿using _01_Framework.Infrastructure;
+using MB.Application.Contracts.ArticleCategory;
 using MB.Domain.ArticleCategoryAgg;
 using MB.Domain.Services;
 using System.Collections.Generic;
@@ -11,23 +12,28 @@ namespace MB.Application
     {
         private readonly IArticleCategoryRepository _articleCategoryRepository;
         private readonly IArticleCategoryValidatorService validatorService;
-        public ArticleCategoryApplication(IArticleCategoryRepository articleCategoryRepository, IArticleCategoryValidatorService validatorService)
+        private readonly IUnitOfWork unitOfWork;
+        public ArticleCategoryApplication(IArticleCategoryRepository articleCategoryRepository, IArticleCategoryValidatorService validatorService, IUnitOfWork unitOfWork)
         {
             this._articleCategoryRepository = articleCategoryRepository;
             this.validatorService = validatorService;
+            this.unitOfWork = unitOfWork;
         }
 
         public void Activate(long id)
         {
+            unitOfWork.BeginTran();
             var articlecategory = _articleCategoryRepository.Get(id);
             articlecategory.Activate();
-            //_articleCategoryRepository.Save();
+            unitOfWork.CommitTran();
         }
 
         public void Add(CreateArticleCategory command)
         {
-            ArticleCategory _category = new ArticleCategory(command.Title,validatorService);
+            unitOfWork.BeginTran();
+            ArticleCategory _category = new ArticleCategory(command.Title, validatorService);
             _articleCategoryRepository.Create(_category);
+            unitOfWork.CommitTran();
         }
 
         public RenameArticleCategory Get(long id)
@@ -37,7 +43,7 @@ namespace MB.Application
             {
                 Id = articlecategory.Id,
                 Title = articlecategory.Title
-            };       
+            };
         }
 
         public List<ArticleCategoryViewModel> List()
@@ -54,18 +60,22 @@ namespace MB.Application
 
         public void Remove(long id)
         {
+            unitOfWork.BeginTran();
             var articlecategory = _articleCategoryRepository.Get(id);
             articlecategory.Remove();
-            //_articleCategoryRepository.Save();
+            unitOfWork.CommitTran();
+
         }
 
         public void Rename(RenameArticleCategory command)
         {
+            unitOfWork.BeginTran();
             var articlecategory = _articleCategoryRepository.Get(command.Id);
             articlecategory.Rename(command.Title);
-           // _articleCategoryRepository.Save();
+            unitOfWork.CommitTran();
+
         }
 
-      
+
     }
 }

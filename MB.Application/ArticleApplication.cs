@@ -1,4 +1,5 @@
-﻿using MB.Application.Contracts.Article;
+﻿using _01_Framework.Infrastructure;
+using MB.Application.Contracts.Article;
 using MB.Domain.ArticleAgg;
 using MB.Infrastructure.EfCore.Repositories;
 using System;
@@ -9,24 +10,28 @@ namespace MB.Application
     public class ArticleApplication : IArticleApplication
     {
         private readonly IArticleRepository _articleRepository;
-
-        public ArticleApplication(IArticleRepository articleRepository)
+        private readonly IUnitOfWork unitOfWork;
+        public ArticleApplication(IArticleRepository articleRepository, IUnitOfWork unitOfWork)
         {
             _articleRepository = articleRepository;
-
+            this.unitOfWork = unitOfWork;
         }
 
         public void Create(CreateArticle command)
         {
+            unitOfWork.BeginTran();
             var article = new Article(command.Title, command.ShortDescription, command.Image, command.Content, command.ArticleCategoryId);
             _articleRepository.Create(article);
+            unitOfWork.CommitTran();
         }
 
         public void Edit(EditArticle command)
         {
+            unitOfWork.BeginTran();
             var article = _articleRepository.Get(command.Id);
             article.Edit(command.Title, command.ShortDescription, command.Image, command.Content, command.ArticleCategoryId);
-           // _articleRepository.Save();
+            unitOfWork.CommitTran();
+         
         }
 
         public EditArticle Get(long id)
@@ -52,16 +57,18 @@ namespace MB.Application
 
         public void Remove(long id)
         {
+            unitOfWork.BeginTran();
             var article = _articleRepository.Get(id);
             article.Remove();
-           // _articleRepository.Save();
+            unitOfWork.CommitTran();
         }
 
         public void Restore(long id)
         {
+            unitOfWork.BeginTran();
             var article = _articleRepository.Get(id);
             article.Restore();
-           // _articleRepository.Save();
+            unitOfWork.CommitTran();
         }
     }
 }
